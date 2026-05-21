@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Schulte Table</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --soft: #555555;
+      --border: #dcdcdc;
+
+      --mono: 'DM Mono', monospace;
+      --serif: 'DM Serif Display', serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* HEADER */
+
+    header {
+      padding: 4rem 2rem 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .app-badge {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    header h1 em {
+      font-style: italic;
+    }
+
+    .effective-date {
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      color: var(--soft);
+    }
+
+    /* LAYOUT */
+
+    .wrapper {
+      max-width: 760px;
+      margin: auto;
+      padding: 2.5rem 2rem 5rem;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 1.5rem 0;
+      margin-bottom: 3rem;
+      color: var(--soft);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* TOC */
+
+    .toc {
+      margin-bottom: 3rem;
+    }
+
+    .toc-label {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+      color: var(--soft);
+    }
+
+    .toc ol {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 2rem;
+      counter-reset: toc;
+    }
+
+    @media (max-width: 600px) {
+      .toc ol {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .toc li {
+      counter-increment: toc;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      gap: 0.7rem;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid transparent;
+      transition: 0.2s ease;
+      font-size: 0.92rem;
+    }
+
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+    }
+
+    .toc a:hover {
+      border-color: var(--text);
+    }
+
+    /* SECTION */
+
+    .section {
+      padding-bottom: 3rem;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    .section-head {
+      display: flex;
+      gap: 1rem;
+      align-items: baseline;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-num {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--soft);
+      flex-shrink: 0;
+    }
+
+    .section h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .section p {
+      color: var(--soft);
+      margin-bottom: 1rem;
+      font-size: 0.96rem;
+    }
+
+    /* LIST */
+
+    .policy-list {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 1.2rem;
+      margin-bottom: 0.7rem;
+      color: var(--soft);
+      font-size: 0.96rem;
+    }
+
+    .policy-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--text);
+    }
+
+    /* PILL */
+
+    .pill {
+      display: inline-block;
+      border: 1px solid var(--text);
+      padding: 0.25rem 0.7rem;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    /* CONTACT */
+
+    .contact-block {
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .contact-block p {
+      margin-bottom: 0.5rem;
+      color: var(--soft);
+      font-size: 0.92rem;
+    }
+
+    .contact-block a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--text);
+      font-family: var(--mono);
+      font-size: 0.88rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--soft);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="app-badge">Schulte Table</div>
+
+    <h1>
+      Privacy<br />
+      <em>Policy</em>
+    </h1>
+
+    <p class="effective-date">
+      Effective date: May 21, 2026
+    </p>
+  </div>
+</header>
+
+<div class="wrapper">
+
+  <div class="intro">
+    Thank you for using Schulte Table. Your privacy matters.
+    This policy explains what information the App may collect,
+    how it is used, and the choices you have.
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-label">Contents</p>
+
+    <ol>
+      <li><a href="#s1">Data We Collect</a></li>
+      <li><a href="#s2">How We Use Data</a></li>
+      <li><a href="#s3">Third-Party Services</a></li>
+      <li><a href="#s4">Advertising &amp; Payments</a></li>
+      <li><a href="#s5">Data Sharing</a></li>
+      <li><a href="#s6">Retention &amp; Security</a></li>
+      <li><a href="#s7">Children's Privacy</a></li>
+      <li><a href="#s8">Your Rights</a></li>
+      <li><a href="#s9">Policy Changes</a></li>
+      <li><a href="#s10">Contact</a></li>
+    </ol>
+  </nav>
+
+  <div id="s1" class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2>Data We Collect</h2>
+    </div>
+
+    <ul class="policy-list">
+      <li>
+        <strong>Personal Information:</strong>
+        The App does not require an account.
+        We only collect personal information if you voluntarily provide it.
+      </li>
+
+      <li>
+        <strong>Usage &amp; Analytics Data:</strong>
+        We may collect non-identifying usage information to improve the App.
+      </li>
+
+      <li>
+        <strong>Device &amp; Log Data:</strong>
+        We may automatically collect technical information such as device model,
+        OS version, app version, and crash logs.
+      </li>
+
+      <li>
+        <strong>Local Data:</strong>
+        Game progress, settings, and preferences are stored on your device.
+      </li>
+    </ul>
+  </div>
+
+  <div id="s2" class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2>How We Use Data</h2>
+    </div>
+
+    <ul class="policy-list">
+      <li>Improve and maintain the App.</li>
+      <li>Respond to support requests.</li>
+      <li>Analyze usage trends and performance.</li>
+    </ul>
+  </div>
+
+  <div id="s3" class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2>Third-Party Services</h2>
+    </div>
+
+    <p>
+      The App may use third-party services that collect and analyze data
+      on our behalf, such as analytics and crash-reporting providers.
+    </p>
+
+    <p>
+      These services have their own privacy policies and are responsible
+      for their own data handling.
+    </p>
+  </div>
+
+  <div id="s4" class="section">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2>Advertising &amp; Payments</h2>
+    </div>
+
+    <p>
+      If the App displays ads, third-party ad networks may collect information
+      as described in their own policies.
+    </p>
+
+    <p>
+      Payment processing for in-app purchases is handled by Google Play
+      or the Apple App Store.
+    </p>
+  </div>
+
+  <div id="s5" class="section">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <h2>Data Sharing &amp; Disclosure</h2>
+    </div>
+
+    <ul class="policy-list">
+      <li>We do not sell personal information.</li>
+
+      <li>
+        We may share limited data with service providers acting on our behalf.
+      </li>
+
+      <li>
+        We may disclose information when required by law.
+      </li>
+    </ul>
+  </div>
+
+  <div id="s6" class="section">
+    <div class="section-head">
+      <span class="section-num">06</span>
+      <h2>Data Retention &amp; Security</h2>
+    </div>
+
+    <p>
+      We retain collected data only as long as necessary for the purposes
+      described in this policy.
+    </p>
+
+    <p>
+      We implement reasonable security measures to protect your information.
+    </p>
+  </div>
+
+  <div id="s7" class="section">
+    <div class="section-head">
+      <span class="section-num">07</span>
+      <h2>Children's Privacy</h2>
+    </div>
+
+    <div class="pill">Under 13</div>
+
+    <p>
+      The App is not directed at children under the age of 13.
+    </p>
+
+    <p>
+      If you believe data from a child has been collected,
+      please contact us for removal.
+    </p>
+  </div>
+
+  <div id="s8" class="section">
+    <div class="section-head">
+      <span class="section-num">08</span>
+      <h2>Your Rights &amp; Choices</h2>
+    </div>
+
+    <ul class="policy-list">
+      <li>You can opt out of analytics where supported.</li>
+
+      <li>
+        You may request access, correction, or deletion of your data.
+      </li>
+    </ul>
+  </div>
+
+  <div id="s9" class="section">
+    <div class="section-head">
+      <span class="section-num">09</span>
+      <h2>Changes to This Policy</h2>
+    </div>
+
+    <p>
+      We may update this Privacy Policy from time to time.
+      Updated versions will be posted within the App or website.
+    </p>
+  </div>
+
+  <div id="s10" class="section">
+    <div class="section-head">
+      <span class="section-num">10</span>
+      <h2>Contact</h2>
+    </div>
+
+    <p>
+      For questions about this policy, contact us:
+    </p>
+
+    <div class="contact-block">
+      <p>Email</p>
+
+      <a href="mailto:coxdosolutions@gmail.com">
+        coxdosolutions@gmail.com
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Schulte Table · All rights reserved
+</footer>
+
+</body>
+</html>
